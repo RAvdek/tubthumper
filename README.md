@@ -1,9 +1,10 @@
 # tubthumper
 
 ```
-pip install -r requirements.txt
-brew install chromedriver
-python tubthumper.py --help
+$ pip install -r requirements.txt --user
+$ brew install chromedriver
+$ python tubthumper.py --help
+
 Usage: tubthumper.py [OPTIONS] EMAIL PASSWORD
 
 Options:
