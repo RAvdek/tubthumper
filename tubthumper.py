@@ -69,12 +69,19 @@ class TubThumper(object):
 
 @click.option('--n_thumps', default=None, help="How many posts to post?")
 @click.option('--song', default='tubthumping', help="Choose your song! (See songs/)")
-@click.argument('password')
-@click.argument('email')
+@click.argument('fb_password')
+@click.argument('fb_email')
 @click.command()        
-def main(email, password, song, n_thumps):
+def main(fb_email, fb_password, song, n_thumps):
+    """Makes the world a better place
 
-    tt = TubThumper(song, email, password)
+\b
+FB_EMAIL:                   Facebook login email address
+FB_PASSWORD:                           Facebook password
+N_THUMPS:                                How many posts?
+    """
+
+    tt = TubThumper(song, fb_email, fb_password)
     tt.thump_n(n_thumps)
     tt.die()
 
